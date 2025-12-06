@@ -66,7 +66,7 @@ The final dataset consists of the 32,000 images from each class (positive and ne
 The module uses a simple sliding window localizer. The input image is reshaped to (300,300). Square windows of side lengths 40,50... 100 are slid along the image. Each sub image seen through the window is reshaped to (32,32) and fed to the network. If the sub image is a face with a minimum confidence of 0.99, the window is marked in the mask. After running all different sized windows on the image, the final mask is blurred with a 50x50 Gaussian filter and binarized. This final binarized mask is used to extract only the faces from the image. The localizer returns two images: an image with only the faces and the raw mask (before blurring and binarization).
 
 **Demo**
-
+Cambios de Belinda Rivas
 The repo includes a pre-trained model: face_model. This can directly be used for localization. Sample usage of this model with FaceDetect.py can be seen in demo.py. Running the demo should display the result of running the localizer on demo.jpg.
 Demos with other images can be seen here: https://youtu.be/N4GIGVnyNBo 
 
